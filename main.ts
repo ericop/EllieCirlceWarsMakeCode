@@ -1,23 +1,19 @@
 namespace SpriteKind {
     export const Friend = SpriteKind.create()
 }
-function cloneAFriend () {
-	
-}
 sprites.onCreated(SpriteKind.Friend, function (sprite) {
-    sprite.setPosition(bluey.x, bluey.y)
+    sprite.setPosition(greeny ? greeny.x : 0, greeny ? greeny.y : 0)
     friendArray.push(sprite)
-    sprite.setVelocity(speedX, speedY)
+    sprite.setVelocity(randint(-50, 50), randint(-50, 50))
     sprite.setBounceOnWall(true)
 })
 let newFriend: Sprite = null
 let speedY = 0
 let speedX = 0
 let friendArray: Sprite[] = []
-let bluey: Sprite = null
 scene.setBackgroundColor(1)
 let redy = sprites.create(assets.image`enemy`, SpriteKind.Enemy)
-bluey = sprites.create(assets.image`player`, SpriteKind.Player)
+let bluey = sprites.create(assets.image`player`, SpriteKind.Player)
 let greeny = sprites.create(assets.image`friend`, SpriteKind.Friend)
 info.setScore(0)
 controller.moveSprite(bluey)
@@ -28,5 +24,12 @@ game.onUpdateInterval(2000, function () {
     greeny.setVelocity(speedX, speedY)
     greeny.setBounceOnWall(true)
     friendArray = []
-    newFriend = sprites.create(assets.image`friend`, SpriteKind.Player)
+    newFriend = sprites.create(assets.image`friend`, SpriteKind.Friend)
+})
+forever(function () {
+    sprites.allOfKind(SpriteKind.Friend).forEach(pal => {
+        if (bluey.overlapsWith(pal)){
+            pal.destroy()
+        }
+    })
 })
