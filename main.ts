@@ -14,6 +14,7 @@ let friendArray: Sprite[] = []
 scene.setBackgroundColor(1)
 let redy = sprites.create(assets.image`enemy`, SpriteKind.Enemy)
 let bluey = sprites.create(assets.image`player`, SpriteKind.Player)
+bluey.setBounceOnWall(true)
 let greeny = sprites.create(assets.image`friend`, SpriteKind.Friend)
 info.setScore(0)
 controller.moveSprite(bluey)
@@ -30,6 +31,7 @@ forever(function () {
     sprites.allOfKind(SpriteKind.Friend).forEach(pal => {
         if (bluey.overlapsWith(pal)){
             pal.destroy()
+            info.changeScoreBy(1)
         }
     })
 })
