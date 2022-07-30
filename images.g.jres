@@ -1,0 +1,22 @@
+{
+    "image1": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAACIiIgIAAAAgIiIiIgAAACIiIiIiAgAAIiIiIiICAAAiIiIiIgIAACIiIiIiAgAAIiIiIiICAAAiIiIiIgIAACIiIiIiAgAAICIiIiIAAAAAIiIiAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "player"
+    },
+    "image2": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAiIiICAAAAICIiIiIAAAAiIiIiIgIAACIiIiIiAgAAIiIiIiICAAAiIiIiIgIAACIiIiIiAgAAIiIiIiICAAAiIiIiIgIAACAiIiIiAAAAACIiIgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "enemy"
+    },
+    "image3": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAB3d3cHAAAAcHd3d3cAAAB3d3d3dwcAAHd3d3d3BwAAd3d3d3cHAAB3d3d3dwcAAHd3d3d3BwAAd3d3d3cHAAB3d3d3dwcAAHB3d3d3AAAAAHd3dwcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "friend"
+    },
+    "*": {
+        "mimeType": "image/x-mkcd-f4",
+        "dataEncoding": "base64",
+        "namespace": "myImages"
+    }
+}
