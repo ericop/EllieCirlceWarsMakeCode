@@ -19,18 +19,17 @@ sprites.onCreated(SpriteKind.Friend, function (sprite) {
 })
 let newEnemy: Sprite = null
 let newFriend: Sprite = null
-game.splash("EllieCircleWars")
-game.showLongText(`*You* are the Blue Circle.
+game.splash("EllieCircleWars","Hit [SPACE BAR] to cont.")
+game.showLongText(`|You| are the Blue Circle.
 Move using the direction keys. 
 Be quick!
 
 Touch the Green Circles 
 for 2pts
-Touching Reds get you 
--3pts
+Touching Red Cicles gets
+ you -3pts
 
-Try to get 20pts to win!
-
+Get 20pts to ~WIN~!
 `, DialogLayout.Bottom)
 let speedY = 0
 let speedX = 0
@@ -53,12 +52,10 @@ forever(function () {
             pal.destroy()
             music.powerUp.play()
             info.changeScoreBy(2)
-            if (info.score() > 20) {
+            if (info.score() >= 20) {
                 game.over(true)
             }
-            
         }
-   
     })
 })
 forever(function () {
@@ -71,6 +68,5 @@ forever(function () {
                 game.over(false)
             }
         }
-
     })
 })
