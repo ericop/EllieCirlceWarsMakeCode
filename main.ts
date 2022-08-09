@@ -24,10 +24,12 @@ game.showLongText(`*You* are the Blue Circle.
 Move using the direction keys. 
 Be quick!
 
-Touch the Green Circles for 2pts
-Touching Reds get you -3pts
+Touch the Green Circles 
+for 2pts
+Touching Reds get you 
+-3pts
 
-Try to get 20pts to win
+Try to get 20pts to win!
 
 `, DialogLayout.Bottom)
 let speedY = 0
